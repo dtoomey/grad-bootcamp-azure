@@ -75,7 +75,7 @@ async function getFlightInfo(context, flightId) {
                     resolve(body);
                 }
                 else {
-                    reject(error);
+                    reject(err);
                 }
             }
         );
