@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "ae9aa2f5-78b5-48a4-b5f1-e743e268b720",
+		"name": "FlightSure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FlightSure (localhost)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7071/api/GetFlightStatus?flightNumber={{airlineCodeQANTAS}}545&departureTime=2021-07-16T17:10:00%2B10:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"GetFlightStatus"
+					],
+					"query": [
+						{
+							"key": "flightNumber",
+							"value": "{{airlineCodeQANTAS}}545"
+						},
+						{
+							"key": "departureTime",
+							"value": "2021-07-16T17:10:00%2B10:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlightSure (Azure) - Cancelled",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/GetFlightStatus?flightNumber={{airlineCodeQANTAS}}545&departureTime=2021-07-14T17:10:00%2B10:00",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"GetFlightStatus"
+					],
+					"query": [
+						{
+							"key": "flightNumber",
+							"value": "{{airlineCodeQANTAS}}545"
+						},
+						{
+							"key": "departureTime",
+							"value": "2021-07-14T17:10:00%2B10:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlightSure (Azure) - On Time",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/GetFlightStatus?flightNumber={{airlineCodeVIRGIN}}1220&departureTime=2021-07-15T15:45:00%2B10:00",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"GetFlightStatus"
+					],
+					"query": [
+						{
+							"key": "flightNumber",
+							"value": "{{airlineCodeVIRGIN}}1220"
+						},
+						{
+							"key": "departureTime",
+							"value": "2021-07-15T15:45:00%2B10:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlightSure (Azure) - Delayed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/GetFlightStatus?flightNumber=ALK605&departureTime=2021-07-15T21:30:00%2B10:00",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"GetFlightStatus"
+					],
+					"query": [
+						{
+							"key": "flightNumber",
+							"value": "ALK605"
+						},
+						{
+							"key": "departureTime",
+							"value": "2021-07-15T21:30:00%2B10:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlightSure (Azure) - Slightly Delayed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/GetFlightStatus?flightNumber={{airlineCodeQANTAS}}1561&departureTime=2021-07-15T20:30:00%2B10:00",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"GetFlightStatus"
+					],
+					"query": [
+						{
+							"key": "flightNumber",
+							"value": "{{airlineCodeQANTAS}}1561"
+						},
+						{
+							"key": "departureTime",
+							"value": "2021-07-15T20:30:00%2B10:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlightSure (Azure) - Scheduled",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/GetFlightStatus?flightNumber={{airlineCodeQANTAS}}545&departureTime=2021-07-16T17:10:00%2B10:00",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"GetFlightStatus"
+					],
+					"query": [
+						{
+							"key": "flightNumber",
+							"value": "{{airlineCodeQANTAS}}545"
+						},
+						{
+							"key": "departureTime",
+							"value": "2021-07-16T17:10:00%2B10:00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://dant-dpegradbootcamp-202103.azurewebsites.net/api"
+		},
+		{
+			"key": "airportCodeOOL",
+			"value": "YBCG"
+		},
+		{
+			"key": "airportCodeBNE",
+			"value": "YBBN"
+		},
+		{
+			"key": "airlineCodeVIRGIN",
+			"value": "VOZ"
+		},
+		{
+			"key": "airlineCodeQANTAS",
+			"value": "QFA"
+		},
+		{
+			"key": "airlineCodeJETSTAR",
+			"value": "JST"
+		}
+	]
+}

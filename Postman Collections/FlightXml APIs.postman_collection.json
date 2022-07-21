@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "83801b1b-abbb-413a-829b-801af389cf77",
+		"name": "FlightXml",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FlightAware - Flight Info Ex",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{apiKey}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{apiUser}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic XXX",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseAPIUrl}}/FlightInfoEx?ident={{airlineCodeJETSTAR}}7678@1658178000",
+					"host": [
+						"{{baseAPIUrl}}"
+					],
+					"path": [
+						"FlightInfoEx"
+					],
+					"query": [
+						{
+							"key": "ident",
+							"value": "{{airlineCodeJETSTAR}}7678@1658178000"
+						},
+						{
+							"key": "howMany",
+							"value": "15",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlightAware - All Airlines",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{apiUser}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{apiKey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic XXX",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseAPIUrl}}/AllAirlines",
+					"host": [
+						"{{baseAPIUrl}}"
+					],
+					"path": [
+						"AllAirlines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlightAware - Airline Info",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{apiKey}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{apiUser}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic XXX",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{baseAPIUrl}}/AirlineInfo?airlineCode={{airlineCodeQANTAS}}",
+					"host": [
+						"{{baseAPIUrl}}"
+					],
+					"path": [
+						"AirlineInfo"
+					],
+					"query": [
+						{
+							"key": "airlineCode",
+							"value": "{{airlineCodeQANTAS}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlightAware - All Airports",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{apiKey}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{apiUser}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic XXX",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{baseAPIUrl}}/AllAirports",
+					"host": [
+						"{{baseAPIUrl}}"
+					],
+					"path": [
+						"AllAirports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlightAware - Airline Flight Schedules",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{apiKey}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{apiUser}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Basic ZHBldHJhaW46YTM0ZTcxYzBjNjViNWE1NGQyYjYzZTZkY2RjMmI5OTgzMGE5NmM2Nw==",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{baseAPIUrl}}/AirlineFlightSchedules?origin={{airportCodeBNE}}&offset=0&startDate=1625122011&endDate=1626247399",
+					"host": [
+						"{{baseAPIUrl}}"
+					],
+					"path": [
+						"AirlineFlightSchedules"
+					],
+					"query": [
+						{
+							"key": "origin",
+							"value": "{{airportCodeBNE}}"
+						},
+						{
+							"key": "how_many",
+							"value": "15",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "startDate",
+							"value": "1625122011"
+						},
+						{
+							"key": "endDate",
+							"value": "1626247399"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseAPIUrl",
+			"value": "https://flightxml.flightaware.com/json/FlightXML2"
+		},
+		{
+			"key": "apiUser",
+			"value": "dpetrain"
+		},
+		{
+			"key": "apiKey",
+			"value": "PROVIDED_BY_YOUR_INSTRUCTOR"
+		},
+		{
+			"key": "airportCodeOOL",
+			"value": "YBCG"
+		},
+		{
+			"key": "airportCodeBNE",
+			"value": "YBBN"
+		},
+		{
+			"key": "airlineCodeVIRGIN",
+			"value": "VOZ"
+		},
+		{
+			"key": "airlineCodeQANTAS",
+			"value": "QFA"
+		},
+		{
+			"key": "airlineCodeJETSTAR",
+			"value": "JST"
+		}
+	]
+}
